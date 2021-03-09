@@ -1,0 +1,25 @@
+<p> </p>
+
+<br/>
+<div class="card">
+    <div class="card-body">
+<table class="table table-hover">
+  <thead>
+  <tr>
+      <td><b>Title: </b></td>
+      <td><b>Description: </b></td>
+      <td colspan="2"><b>Actions: </b></td>
+  </tr>
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let item of todoitems">
+          <td>{{ item.todo_name }}</td>
+          <td>{{ item.todo_description }}</td>
+          <td><a [routerLink]="['edit', item._id]" class="btn btn-primary">Edit</a>&nbsp;&nbsp;<a (click) = "deleteItem(item._id)" class="btn btn-primary">Delete</a></td>
+      </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
